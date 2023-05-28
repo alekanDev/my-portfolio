@@ -1,0 +1,132 @@
+.publicLayoutContent{
+  background-color: var(--negro);
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent{
+  width: 100%;
+  height: 84%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* #region navbar*/
+.navbarContent{
+  width: 100%;
+  height: 16%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.navbarLogoContent{
+width: 8%;
+display: flex;
+justify-content: flex-end;
+}
+  .navbarLogo{
+    background-color: var(--amarillo);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    margin-right: 15px;
+  }
+.navbarNameContent{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+  .nameTitle{
+    height: 35px;
+    font-weight: bold;
+    font-size: 32px;
+    text-shadow: 1px 0.3px rgb(255, 255, 255);
+  }
+  .nameSlogan{
+    font-size: 12px;
+  }
+.navbarMenu{
+  width: 66%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+  .navbarMenu:hover{
+    cursor: pointer;
+    color: var(--amarillo);
+  }
+/* #endregion */
+
+/* #region FollowMe */
+.followMe{
+  color: var(--negro--);
+  position: fixed;
+  top: 0;
+  left: -110px;
+  margin-top: 25%;
+  transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+}
+  .textFollowMe{
+    size: 15px;
+    font-weight: 600;
+  }
+  .lineFollowMe{
+    color: yellow;
+    width: 70px;
+    height: 0px;
+    border: solid var(--negro--) 1px;
+    border-radius: 50px;
+    margin: 0 10px;
+  }
+  .iconFollowMe{
+    transform: rotate(-90deg);
+    margin: 0 7px;
+    color: white;
+  }
+    .iconFollowMe:hover{
+      cursor: pointer;
+      color: var(--amarillo);
+    }
+/* #endregion */
+
+@media only screen and (max-width: 720px) {
+/* #region navbar*/
+.navbarLogoContent{
+    width: 15%;
+    display: flex;
+    align-items: center;
+  }
+    .navbarLogo{
+      width: 20px;
+      height: 20px;
+    }
+  .navbarNameContent{
+    width: 70%;
+  }
+    .nameTitle{
+      font-size: 28px;
+    }
+    .nameSlogan{
+      font-size: 10px;
+      box-sizing: border-box;
+    }
+  .navbarMenu{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* #endregion */
+
+  /* #region FollowMe */
+  .followMe{
+    margin-top: 100%;
+  }
+  /* #endregion */
+}
