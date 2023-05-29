@@ -5,6 +5,8 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+
 }
 
 .mainContent{
@@ -49,17 +51,102 @@ justify-content: flex-end;
   .nameSlogan{
     font-size: 12px;
   }
-.navbarMenu{
-  width: 66%;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5%;
-}
-  .navbarMenu:hover{
-    cursor: pointer;
-    color: var(--amarillo);
+  /* #endregion */
+  
+  .navbarMenu{
+    width: 66%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
   }
-/* #endregion */
+    .navbarMenu:hover{
+      cursor: pointer;
+      color: var(--amarillo);
+    }
+  .menuContent{
+    width: 350px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.329);  
+    backdrop-filter: blur(20px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    box-shadow: inset 15px 0px 15px rgba(255, 255, 255, 0.068);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    animation-name: openMenu;
+    animation-duration: 0.6s;
+    animation-timing-function: ease;
+  }
+
+  @keyframes openMenu {
+    0% {right: -100%; opacity: 0;}
+    100% {right: 0%; opacity: 1;}
+  }
+
+    .btnCloseMenu{
+      box-sizing: border-box;
+      margin-top: 13%;
+      margin-left: 71%;
+      animation-name: openMenu;
+      animation-duration: 0.8s;
+      position: relative;
+      animation-timing-function: ease;
+    }
+    @keyframes openMenu {
+      0% {right: -100%; opacity: 0}
+      100% {right: 0%; opacity: 1;}
+    }
+      .btnCloseMenu:hover{
+        cursor: pointer;
+        color: var(--amarillo);
+      }
+
+    .lineClose{
+      width: 80px;
+      border: solid 1px var(--amarillo);
+      border-radius: 25px;
+      align-self: flex-end;
+      box-sizing: border-box;
+      margin-right: 20%;
+      margin-top: 10px;
+      animation-name: openMenu;
+      animation-duration: 1s;
+      position: relative;
+      animation-timing-function: ease;
+    }
+    .boxMenu{
+      width: 90%;
+      height: 100%;
+      list-style: none;
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding-top: 50%;
+    }
+  .listRoutes{
+    width: 50%;
+    align-self: center;
+
+  }
+    .listRoute{
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      margin-top: 40px;
+    }
+      .listRoute:hover{
+        cursor: pointer;
+        color: var(--amarillo);
+        font-weight: bold;
+      }
+    .nameRoute{
+      font-size: 18px;
+      box-sizing: border-box;
+      margin-left: 20px;
+    }
 
 /* #region FollowMe */
 .followMe{
@@ -123,6 +210,18 @@ justify-content: flex-end;
     align-items: center;
   }
   /* #endregion */
+
+  .menuContent{
+    width: 300px;
+  }
+    .btnCloseMenu{
+      margin-top: 22%;
+      margin-left: 77%;
+    }
+    .lineClose{
+      margin-right: 12%;
+      margin-top: 6px;
+    }
 
   /* #region FollowMe */
   .followMe{

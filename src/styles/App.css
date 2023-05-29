@@ -10,3 +10,22 @@
   --negro-: #2B2B2B;
   --negro--: #808080;
 }
+
+.hidden{
+  display: none;
+}
+
+.buildingContent{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30%;
+}
+.buildingSite{
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--amarillo);
+  text-shadow: 2.5px 0 var(--amarillo);
+  letter-spacing: 0.5px;
+}

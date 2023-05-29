@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import PublicPayout from './layouts/PublicLayout';
 import Home from './pages/Home';
+import Building from './pages/Building';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={ <PublicPayout children= { <Home/> }/> } />
+          <Route path='*' element={ <PublicPayout children= { <Building/> }/> } />
         </Routes>
       </BrowserRouter>
     </div>
