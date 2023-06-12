@@ -54,6 +54,98 @@ justify-content: flex-end;
   /* #endregion */
   
   .navbarMenu{
+    display: none;
+  }
+
+  .fullMenu{
+    width: 66%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    margin-right: 7%;
+    list-style: none;
+  }
+    .itemMenu{
+      font-size: 15px;
+      margin: 0 20px;
+    }
+      .itemMenu:hover{
+        cursor: pointer;
+        font-weight: bold;
+        color: var(--amarillo);
+      }
+    .itemMenuSelect{
+      color:  var(--amarillo);
+      font-weight: bold;
+    }
+
+/* #region FollowMe */
+.followMe{
+  color: var(--negro--);
+  position: fixed;
+  top: 0;
+  left: -110px;
+  margin-top: 25%;
+  transform: rotate(90deg);
+  display: flex;
+  align-items: center;
+}
+  .textFollowMe{
+    size: 15px;
+    font-weight: 600;
+  }
+  .lineFollowMe{
+    color: yellow;
+    width: 70px;
+    height: 0px;
+    border: solid var(--negro--) 1px;
+    border-radius: 50px;
+    margin: 0 10px;
+  }
+  .iconFollowMe{
+    transform: rotate(-90deg);
+    margin: 0 7px;
+    color: white;
+  }
+    .iconFollowMe:hover{
+      cursor: pointer;
+      color: var(--amarillo);
+    }
+/* #endregion */
+
+@media only screen and (max-width: 890px) {
+/* #region navbar*/
+.navbarLogoContent{
+    width: 15%;
+    display: flex;
+    align-items: center;
+  }
+    .navbarLogo{
+      width: 20px;
+      height: 20px;
+    }
+  .navbarNameContent{
+    width: 70%;
+  }
+    .nameTitle{
+      font-size: 28px;
+    }
+    .nameSlogan{
+      font-size: 10px;
+      box-sizing: border-box;
+    }
+  .navbarMenu{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* #endregion */
+
+
+  .navbarMenu{
     width: 66%;
     display: flex;
     justify-content: flex-end;
@@ -63,6 +155,11 @@ justify-content: flex-end;
       cursor: pointer;
       color: var(--amarillo);
     }
+
+    .fullMenu{
+      display: none;
+    }
+
   .menuContent{
     width: 350px;
     height: 100%;
@@ -147,69 +244,6 @@ justify-content: flex-end;
       box-sizing: border-box;
       margin-left: 20px;
     }
-
-/* #region FollowMe */
-.followMe{
-  color: var(--negro--);
-  position: fixed;
-  top: 0;
-  left: -110px;
-  margin-top: 25%;
-  transform: rotate(90deg);
-  display: flex;
-  align-items: center;
-}
-  .textFollowMe{
-    size: 15px;
-    font-weight: 600;
-  }
-  .lineFollowMe{
-    color: yellow;
-    width: 70px;
-    height: 0px;
-    border: solid var(--negro--) 1px;
-    border-radius: 50px;
-    margin: 0 10px;
-  }
-  .iconFollowMe{
-    transform: rotate(-90deg);
-    margin: 0 7px;
-    color: white;
-  }
-    .iconFollowMe:hover{
-      cursor: pointer;
-      color: var(--amarillo);
-    }
-/* #endregion */
-
-@media only screen and (max-width: 720px) {
-/* #region navbar*/
-.navbarLogoContent{
-    width: 15%;
-    display: flex;
-    align-items: center;
-  }
-    .navbarLogo{
-      width: 20px;
-      height: 20px;
-    }
-  .navbarNameContent{
-    width: 70%;
-  }
-    .nameTitle{
-      font-size: 28px;
-    }
-    .nameSlogan{
-      font-size: 10px;
-      box-sizing: border-box;
-    }
-  .navbarMenu{
-    width: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /* #endregion */
 
   .menuContent{
     width: 300px;

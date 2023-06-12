@@ -52,6 +52,25 @@ const PublicLayout = ({ children }) => {
           <div className="nameTitle">AlekanDev</div>
           <div className="nameSlogan">Transformando ideas en soluciones digitales.</div>
         </div>
+        <ul className='fullMenu'>
+          {
+            listItems.map((el, index) =>{
+              if(location.pathname !== el.route){
+                return (
+                  <li key={ index } className='itemMenu' onClick={ () => {
+                    navigate(`${ el.route }`)
+                  }}><span className="nameRoute"> { el.name } </span> </li>
+                )
+              } else {
+                return (
+                  <li key={ index } className='itemMenu itemMenuSelect' onClick={ () => {
+                    navigate(`${ el.route }`)
+                  }}><span className="nameRoute"> { el.name } </span> </li>
+                )
+              }
+            }) 
+          }
+        </ul>
         <div className="navbarMenu">
           <BsList size={ 32 } onClick={ () => {
             menuView.value ='menuContent'
