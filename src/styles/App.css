@@ -2,11 +2,46 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  /* background-color: var(--negro); */
 }
 
 :root{
   --negro: #272727;
-  --amarillo: #ECD934;
+  --amarillo: #F3CA2F;
   --negro-: #2B2B2B;
   --negro--: #808080;
+}
+
+.hidden{
+  display: none;
+}
+
+.buildingContent{
+  width:50%;
+  height:50%;
+  display: flex;
+  justify-content: center;
+}
+.buildingSite{
+  height: 100px;
+  font-weight: bold;
+  font-size: 40px;
+  color: var(--amarillo);
+  text-shadow: 2.5px 0 var(--amarillo);
+  letter-spacing: 0.5px;
+}
+
+.titlePage{
+  width: 100%;
+  font-size: 36px;
+  font-weight: bold;
+  box-sizing: border-box;
+  margin-top: 10%;
+}
+
+@media only screen and (max-width: 890px) {
+  .titlePage{
+    font-size: 32px;
+    margin-top: 80%;
+  }
 }
